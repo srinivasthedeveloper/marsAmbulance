@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+    <!-- inner Section -->
+   <section class="overlay overlay-green parallax" data-bg-image="{% static 'images/jpg/bg/bg1.jpg' %}" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="inner-title">
+                        <h2>Contact</h2>
+                        <p>Home. Contact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-1">
+              <div class="container">
+                  <div class="section-content">
+                      <div class="row">
+                          <div class="col-md-4">
+                              <div class="contact-item">
+                                  <div class="content">
+                                      <h5>contact us : </h5>
+                                      <p>17 Downtown St, Victoria,<br>Australia</p>
+                                  </div>
+                                  <span class="icon icon-Starship"></span>
+                              </div>
+                              <div class="contact-item">
+                                  <div class="content">
+                                      <h5>call us : </h5>
+                                      <p>+(01) 123 456 7896<br>+(01) 123 456 7899</p>
+                                  </div>
+                                  <span class="icon icon-Phone2"></span>
+                              </div>
+                          </div>
+                          <div class=" col-md-8">
+                          <div class=" col-md-10">
+
+                            <div class="pull-left" style="margin-left:15%;">
+                            <div class=""><img src="{% static 'images/png/logo/logo.png' %}" width="50%" height="50%" style="margin-left:25%"></div>
+                            <h5 style="margin-top:1.5%;">Transport&nbsp<span style="color:#0798bc">Authorization</span>&nbspForm</h5><br></div></div>
+                            <div class=" col-md-10">
+                            <h5><strong>MARS&nbspSecure&nbspTransport & Recruitment&nbspService&nbspLtd <span class="icon icon-Phone2"></span> 123 456 789</h5></strong><br>
+                              <!-- Contact Form -->
+                              <form class="contact-form" method="post">
+                                {% csrf_token %}
+                                <div class="messages"></div>
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="DateOfTravel"><strong>Date&nbspof&nbspTravel</strong></label>
+                                                <input id="form_name" type="date" name="dateOfTravel" class="form-control" placeholder="Please enter Date of Travel" required="required">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="TimeOfTravel"><strong>Time&nbspof&nbspTravel</strong></label>
+                                                <input id="form_name" type="time" name="timeOfTravel" class="form-control" placeholder="Please enter Travel Time" required="required">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="PatientName"><strong>Name&nbspof&nbspPatient</strong></label>
+                                                <input id="form_phone" type="text" name="PatientName" class="form-control" placeholder="Enter Patient Name" required="required" data-error="Patient Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                        <div class="checkbox checkbox-primary">
+                                        	<label for="sex"><b style="align:center">Sex</b></label><br>
+                                            <input type="radio" id="male" value="Male" name="sex" class="styled">
+                                            <label for="sex">M
+                                            </label>
+                                            <input id="female" value="Female" type="radio" name="sex" class="styled">
+                                            <label for="female">F
+                                            </label>
+                                        </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="DateofBirth"><strong>DOB</strong></label>
+                                                <input id="form_phone" type="date" name="dateOfBirth" class="form-control" placeholder="Enter Patient DateofBirth" required="required" data-error="Patient DateofBirth is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12" style="margin-left:7%">
+                                        <div class="checkbox checkbox-primary">
+                                        	<label for="sex"><b style="align:center">Ethnicity</b></label>
+                                            <input type="radio" id="Black" value="Black" name="Ethnicity" class="styled">
+                                            <label for="Black">black
+                                            </label>
+                                            <input id="White" value="White" type="radio" name="Ethnicity" class="styled">
+                                            <label for="White">white
+                                            </label>
+
+                                            <input id="Asian" value="Asian" type="radio" name="Ethnicity" class="styled">
+                                            <label for="Asian">asian
+                                            </label>
+
+                                            <input id="Mixed" value="Mixed" type="radio" name="Ethnicity" class="styled">
+                                            <label for="Mixed">mixed
+                                            </label>
+
+                                            <input id="other" value="other" type="radio" name="Ethnicity" class="styled">
+                                            <label for="other">other
+                                            </label>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="risks"><strong>Risks *</strong></label>
+                                                <input id="form_risks" type="text" name="risks" class="form-control" placeholder="Please enter Patient RiskFactors" required="required" data-error="Risk Factor is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12"><h3>PickUp&nbspDetails:-</h3><br></div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="address"><strong>Address/Hospital *</strong></label>
+                                                <textarea id="form_address" name="pickupAddress" class="form-control" placeholder="Enter Valid address" rows="4" required data-error="Please enter valid address."></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="pward"><strong>Ward/DoorNo</strong></label>
+                                                <input id="form_ward" type="text" name="pickupWard" class="form-control" placeholder="enter Ward/DoorNo *" required="required" data-error="ward/door number is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_lastname"><strong>Contact&nbspName(at pickup)</strong></label>
+                                                <input id="form_pname" type="text" name="contactnamep" class="form-control" placeholder="Please enter your Name *" required="required" data-error="Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_pnum"><strong>Phone&nbspNo(at pickup)</strong></label>
+                                                <input id="form_phone" type="text" name="contactNop" class="form-control" placeholder="Please enter your phone *" required="required" data-error="Phone number is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12"><h3>Destination:-</h3><br></div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                              <label for="address"><strong>Address/Hospital *</strong></label>
+                                                <textarea id="form_address" name="dropAddress" class="form-control" placeholder="Enter Valid address" rows="4" required data-error="Please enter valid address."></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="dward"><strong>Ward/DoorNo</strong></label>
+                                                <input id="form_dward" type="text" name="dropWard" class="form-control" placeholder="Enter ward/DoorNo *" required="required" data-error="ward/door number is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="dcontactname"><strong>Contact&nbspName(Destination)</strong></label>
+                                                <input id="dcontactname" type="text" name="dropName" class="form-control" placeholder="Please enter Name *" required="required" data-error="Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="form_lastname"><strong>Phone&nbspNo(Destination)</strong></label>
+                                                <input id="form_phone" type="text" name="dropphone" class="form-control" placeholder="Please enter your phone *" required="required" data-error="Phone number is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                        <div class="checkbox checkbox-primary">
+                                        	<label><b style="align:center">Escorts&nbspRequired&nbsp&nbsp&nbsp&nbsp</b></label>
+                                            <input type="radio" id="required" value="Escort Required" name="escort" class="styled">
+                                            <label for="required">YES
+                                            </label>
+                                            <input id="noNeed" value="Not Needed" type="radio" name="escort" class="styled">
+                                            <label for="noNeed">NO
+                                            </label>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                        <div class="checkbox checkbox-primary">
+                                        	<label><b style="align:center">(HCA)</b></label><br>
+                                            <input type="radio" id="hcaMale" value="HCA-Male" name="HCA" class="styled">
+                                            <label for="hcaMale">M
+                                            </label>
+                                            <input id="hcafemale" value="HCA-Female" type="radio" name="HCA" class="styled">
+                                            <label for="hcafemale">F
+                                            </label>
+                                        </div>
+                                        <label><strong>Quantity:-</strong></label>
+                                        <input id="form_phone" type="number" name="HCAQuantity" class="form-control" placeholder="Please enter Quantity" data-error="number is required.">
+                                        </div>
+                                        <div class="col-sm-3">
+                                        <div class="checkbox checkbox-primary">
+                                        	<label><b style="align:center">(RMN)</b></label><br>
+                                            <input type="radio" id="rmnMale" value="RMN-Male" name="RMN" class="styled">
+                                            <label for="rmnMale">M
+                                            </label>
+                                            <input id="rmnFemale" value="RMN-Female" type="radio" name="RMN" class="styled">
+                                            <label for="rmnFemale">F
+                                            </label>
+                                        </div>
+                                        <label><strong>Quantity:-</strong></label>
+                                        <input id="form_phone" type="number" name="RMNQuantity" class="form-control" placeholder="Please enter Quantity" data-error="Quantity is required.">
+                                        </div>
+                                        <div class="col-sm-3">
+                                        <div class="checkbox checkbox-primary">
+                                        	<label><b style="align:center">(RGN)</b></label><br>
+                                            <input type="radio" id="rgnMale" value="RGN-Male" name="RGN" class="styled">
+                                            <label for="rgnMale">M
+                                            </label>
+                                            <input id="rgnfemale" value="RGN-Female" type="radio" name="RGN" class="styled">
+                                            <label for="rgnfemale">F
+                                            </label>
+                                        </div>
+                                        <label><strong>Quantity:-</strong></label>
+                                        <input id="rgnQuantity" type="number" name="RGNQuantity" class="form-control" placeholder="Please enter Quantity *" data-error="Quantity is required.">
+                                        </div><div class="help-block with-errors"></div>
+                                        
+                                    </div>
+                                        <div class="col-md-12">
+                                            <br><input type="submit" class="btn btn-success btn-send" value="BOOK NOW">
+                                        </div>
+                                    </div>
+                                </div>
+                              </form> 
+                          </div>
+                      </div>
+                  </div>
+              </div>
+    </section>
+  
+{% endblock %}

@@ -1,0 +1,179 @@
+{% load static %}
+{% static 'images' as baseUrl %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mars - Safe & Secure Transports</title>
+<!-- Stylesheets -->
+<link rel="shortcut icon"  type="image/png" href="{% static 'images/ico/logo.png' %}">
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<!-- Responsive -->
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'css/main.min.css' %}" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body class="theme-green">
+<div class="page-wrapper">   
+  <!-- start preloader -->
+  <div class="preloader"></div>
+  <!-- end preloader --> 
+  
+  <!-- Main Header / Style One-->
+<header class="main-header header-style-one"> 
+  <!-- Header Top -->
+  <div class="header-top">
+    <div class="container clearfix ptn pbn"> 
+      <!--Top Left-->
+      <div class="top-left pull-left">
+        <ul class="info-nav clearfix">
+          <li> 
+            <!--Social Links-->
+            <div class="social-links pull-left"> <span class="text-theme-color">Follow Us</span> : <a href="#"><span class="fa fa-facebook-f"></span></a> <a href="#"><span class="fa fa-twitter"></span></a> <a href="#"><span class="fa fa-google-plus"></span></a> <a href="#"><span class="fa fa-linkedin"></span></a> </div>
+          </li>
+          <li><a href="mailto:youYourmail@yoursitem"><span class="icon icon-Mail mr10"></span>Opening Hours</a></li>
+        </ul>
+      </div>
+      <!--Top Right-->
+      <div class="top-right pull-right clearfix"> 
+        <!--Lang Bar-->
+        <ul class="info-nav clearfix">
+          <li><a href="tel:+910987654321"><i class="icon icon-Phone mr10 text-theme-color"></i><span class="ml5">Emergency Line</span> (+123) 2456 987</a></li>
+          <li><a href="/booking" class="text-uppercase appoinment"><i class="icon icon-Pen mr10 text-theme-color "></i> Make an appoinment</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Header Top End --> 
+  
+  <!--Header-Main Box-->
+  <div class="header-mainbox">
+    <div class="container ptn pbn">
+      <div class="clearfix">
+        <div class="pull-left">
+          <div class="logo"> <a href="/"><img src="{% static 'images/png/logo/logo.png' %}" alt="" title="Mars - Safe & Secure Transports"></a> </div>
+        </div>
+        <div class="outer-box clearfix"> 
+          <!-- Main Menu -->
+          <nav class="main-menu logo-outer">
+            <div class="navbar-header"> 
+              <!-- Toggle Button -->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="navbar-collapse collapse clearfix">
+              <ul class="navigation clearfix" style="margin-top:2.5%">
+                <li> <a href="/">Home</a>
+                </li>
+                <li class="dropdown"> <a href="#">Sercices</a>
+                  <ul>
+                    <li><a href="/training">Training</a></li>
+                    <li><a href="/service">Our Services</a></li>
+                  </ul>
+                </li>
+                <li><a href="/booking">Book Now</a>
+                </li>
+                <li> <a href="/about">About us</a>
+                </li>
+                <!--<li> <a href="/news">News</a>-->
+                </li>
+                <li> <a href="/contact">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- Main Menu End--> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Header Main Box End--> 
+</header>
+<!--End Main Header --> 
+
+
+
+{% block content %}
+
+
+
+  {% endblock %}
+
+
+
+
+
+  <!--Main Footer-->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="footer-1"> <img src="{% static 'images/jpg/logo/logo.png' %}" alt="">
+            <p>Nulla vitae cursus quam, nec ultrices nibh. Quisque tristique lorem ac diam laoreet auctor. Proin ac massa elit. </p>
+            <ul class="social">
+              <li><a href="#"><span>follow us :</span></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!--Footer Column-->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="footer-2">
+            <h4>latest news</h4>
+            <p>Aenean tristique justo et nibh molestie, non porttitor eros suscipit</p>
+            <p>Phasellus dapibus dictum augue ut</p>
+            <p>Mauris blandit vitae. Praesent non</p>
+          </div>
+        </div>
+        <!--Footer Column-->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="footer-3">
+            <h4>Contact us</h4>
+            <p><span>Address :</span> <br>
+              8500 Lorem Street, Chicago, IL, 55030</p>
+            <p><span>Call Us :</span> <br>
+              (123) 456-78-90</p>
+            <p><span>Email :</span> <br>
+              sales@Marssite.com </p>
+          </div>
+        </div>
+        <!--Footer Column-->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="footer-4">
+            <h4>Flickr</h4>
+            <div class="flickr-feed clearfix">
+              <ul>
+                <li> <a href="{% static 'images/jpg/flicker/1.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'images/jpg/flicker/1.jpg' %}" alt=""></a> </li>
+                <li> <a href="{% static 'images/jpg/flicker/2.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'images/jpg/flicker/2.jpg' %}" alt=""></a> </li>
+                <li> <a href="{% static 'images/jpg/flicker/3.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'images/jpg/flicker/3.jpg' %}" alt=""></a> </li>
+                <li> <a href="{% static 'images/jpg/flicker/4.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'images/jpg/flicker/4.jpg' %}" alt=""></a> </li>
+                <li> <a href="{% static 'images/jpg/flicker/5.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'images/jpg/flicker/5.jpg' %}" alt=""></a> </li>
+                <li> <a href="{% static 'images/jpg/flicker/6.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'images/jpg/flicker/6.jpg' %}" alt=""></a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!--End pagewrapper--> 
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".main-header"><span class="fa fa-long-arrow-up"></span></div>
+<!-- emergency calling -->
+<div class="scroll-to-top scroll-to-target" style="left: 15px; bottom: 15px">
+    <a href="tel:+910987654321">(+91)1234567890</a>
+</div>
+<!-- emergency calling end here -->
+<script src="{% static 'js/jquery.js' %}"></script> 
+<script src="{% static 'js/all-jquery.js' %}"></script> 
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
