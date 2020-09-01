@@ -181,7 +181,7 @@
                                             <input type="radio" id="required" value="Escort Required" name="escort" class="styled">
                                             <label for="required">YES
                                             </label>
-                                            <input id="noNeed" value="Not Needed" type="radio" name="escort" class="styled">
+                                            <input id="noNeed" value="Not Needed" type="radio" name="escort" class="styled" checked>
                                             <label for="noNeed">NO
                                             </label>
                                         </div>
@@ -195,9 +195,12 @@
                                             <input id="hcafemale" value="HCA-Female" type="radio" name="HCA" class="styled">
                                             <label for="hcafemale">F
                                             </label>
+                                            <input id="hcanone" value="No-HCA" type="radio" name="HCA" class="styled" checked>
+                                            <label for="hcanone">None
+                                            </label>
                                         </div>
                                         <label><strong>Quantity:-</strong></label>
-                                        <input id="form_phone" type="number" name="HCAQuantity" class="form-control" placeholder="Please enter Quantity" data-error="number is required.">
+                                        <input id="form_phone" type="number" value="0" name="HCAQuantity" class="form-control" placeholder="Please enter Quantity" data-error="number is required.">
                                         </div>
                                         <div class="col-sm-3">
                                         <div class="checkbox checkbox-primary">
@@ -208,9 +211,12 @@
                                             <input id="rmnFemale" value="RMN-Female" type="radio" name="RMN" class="styled">
                                             <label for="rmnFemale">F
                                             </label>
+                                            <input id="rmnnone" value="No-RMN" type="radio" name="RMN" class="styled" checked>
+                                            <label for="rmnnone">None
+                                            </label>
                                         </div>
                                         <label><strong>Quantity:-</strong></label>
-                                        <input id="form_phone" type="number" name="RMNQuantity" class="form-control" placeholder="Please enter Quantity" data-error="Quantity is required.">
+                                        <input id="form_phone" type="number" value="0" name="RMNQuantity" class="form-control" placeholder="Please enter Quantity" data-error="Quantity is required.">
                                         </div>
                                         <div class="col-sm-3">
                                         <div class="checkbox checkbox-primary">
@@ -221,9 +227,12 @@
                                             <input id="rgnfemale" value="RGN-Female" type="radio" name="RGN" class="styled">
                                             <label for="rgnfemale">F
                                             </label>
+                                            <input id="rgnnone" value="No-RGN" type="radio" name="RGN" class="styled" checked>
+                                            <label for="rgnnone">None
+                                            </label>
                                         </div>
                                         <label><strong>Quantity:-</strong></label>
-                                        <input id="rgnQuantity" type="number" name="RGNQuantity" class="form-control" placeholder="Please enter Quantity *" data-error="Quantity is required.">
+                                        <input id="rgnQuantity" type="number" value="0" name="RGNQuantity" class="form-control" placeholder="Please enter Quantity *" data-error="Quantity is required.">
                                         </div><div class="help-block with-errors"></div>
                                         
                                     </div>

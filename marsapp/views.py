@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import ContactUs,Booking
+from .mail_test import *
+from .secure import *
 
 def home(request):
     return render(request,'index.html')
@@ -22,6 +24,7 @@ def contact(request):
 
         form=ContactUs.objects.create(name=Name,phoneNo=Phone,emailId=Email,reason=Reason,message=Message)
         form.save()
+        SendAnEmail( usrs, psws, fromaddrs, toaddrs, "Contact Form" ,["Name = ","Phone_Number = ","Email_Id = ","Reason = ","Message = "],[Name,Phone,Email,Reason,Message])
         print("form saved")
         return redirect("/")
         
@@ -72,6 +75,7 @@ def booking(request):
 
         form=Booking.objects.create(dateOfTravel=dateOfTravelt,   timeOfTravel=timeOfTravelt,  patientName=patientNamet,  sex=sext,  DOB=DOBt,  ethnicity=ethnicityt,    risks=riskst,  pickUpAddress=pickUpAddresst,    pickUpWard=pickUpWardt, pickUpContactName=pickUpContactNamet,   pickUpPhoneNO=pickUpPhoneNOt, destinationAddress=destinationAddresst, destinationWard=destinationWardt, destinationContactName=destinationContactNamet,  destinationPhoneNO=destinationPhoneNOt,   escortRequirement=escortRequirementt,  hcaSex=hcaSext,   hcaQuantity=hcaQuantityt,   rmnSex=rmnSext,    rmnQuantity=rmnQuantityt,    rgnSex=rgnSext, rgnQuantity=rgnQuantityt)
         form.save()
+        SendAnEmail( usrs, psws, fromaddrs, toaddrs, "Booking Form" ,["Date of Travel = ","Time of Travel = ","Name of Patient = ","Sex = ","DOB = ","Ethnicity = ","Risks = ","\nPickUp","Address/Hospital = ","Ward/DoorNo = ","Contact Name(at pickup) = ","Phone No(at pickup) = ","\nDestination ","Address/Hospital = ","Ward/DoorNo = ","Contact Name(Destination) = ","Phone No(Destination) = ","Escorts Required = ","(HCA SEX) = ","(HCA Quantity) = ","(RMN SEX) = ","(RMN Quantity) = ","(RGN SEX) = ","(RGN Quantity) = "],[dateOfTravelt,timeOfTravelt,patientNamet,sext,DOBt,ethnicityt,riskst," Details:- \n",pickUpAddresst,pickUpWardt,pickUpContactNamet,pickUpPhoneNOt,"Details:- \n",destinationAddresst,destinationWardt,destinationContactNamet,destinationPhoneNOt,escortRequirementt,hcaSext,hcaQuantityt,rmnSext,rmnQuantityt,rgnSext,rgnQuantityt])
         print("form saved")
         return redirect("/")
     
