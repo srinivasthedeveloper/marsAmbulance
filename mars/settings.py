@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5750*!0!0(gnq*0sz3c_e^6yov7$2_e%3lj8js@=(-fej5-mms'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mars-secure-transport.herokuapp.com','127.0.0.1']
 
 
 # Application definition
